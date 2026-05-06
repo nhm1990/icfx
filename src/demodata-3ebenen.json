@@ -1,0 +1,467 @@
+{
+  "exportedAt": "2026-05-05T18:00:00.000Z",
+  "variants": {
+    "original": {
+      "id": "demo-3-ebenen",
+      "label": "3 Ebenen Demo",
+      "nodes": [
+        {
+          "id": "sec_mobil",
+          "type": "section",
+          "label": "Mobilität & Selbstversorgung",
+          "required": false,
+          "helpText": "",
+          "options": [],
+          "children": [
+            {
+              "id": "q_stehen",
+              "type": "question",
+              "label": "Stehen",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Probleme, eine halbe Stunde oder länger zu stehen?",
+              "icon": "fluent-emoji-high-contrast:woman-standing",
+              "selectedIdx": 3,
+              "children": [
+                {
+                  "id": "icf_d415",
+                  "type": "icf",
+                  "label": "Körperposition verbleiben",
+                  "icfCode": "d415",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:human-queue",
+                  "question": "Wie gut können Sie in einer Position verbleiben?",
+                  "selectedIdx": 4,
+                  "children": [
+                    {
+                      "id": "det_d415_1",
+                      "type": "detail",
+                      "label": "Stehen (kurz)",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:timer-sand",
+                      "question": "Können Sie 5 Minuten stehen bleiben?",
+                      "selectedIdx": 1,
+                      "children": []
+                    },
+                    {
+                      "id": "det_d415_2",
+                      "type": "detail",
+                      "label": "Stehen (lang)",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:clock-outline",
+                      "question": "Können Sie 30 Minuten stehen bleiben?",
+                      "selectedIdx": 3,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "icf_d4154",
+                  "type": "icf",
+                  "label": "Im Stehen verbleiben",
+                  "icfCode": "d4154",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:human",
+                  "question": "Wie lange können Sie auf den Beinen stehen?",
+                  "selectedIdx": 3,
+                  "children": [
+                    {
+                      "id": "det_d4154_1",
+                      "type": "detail",
+                      "label": "Freies Stehen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:human-handsup",
+                      "question": "Können Sie ohne Festhalten stehen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "q_gehen",
+              "type": "question",
+              "label": "Gehen",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Schwierigkeiten beim Gehen?",
+              "icon": "mdi:walk",
+              "selectedIdx": 2,
+              "children": [
+                {
+                  "id": "icf_d450",
+                  "type": "icf",
+                  "label": "Gehen",
+                  "icfCode": "d450",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:shoe-print",
+                  "question": "Wie weit können Sie ohne Pause gehen?",
+                  "selectedIdx": 2,
+                  "children": [
+                    {
+                      "id": "det_d450_1",
+                      "type": "detail",
+                      "label": "Kurze Strecke",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:map-marker-distance",
+                      "question": "Können Sie 100m am Stück gehen?",
+                      "selectedIdx": 1,
+                      "children": []
+                    },
+                    {
+                      "id": "det_d450_2",
+                      "type": "detail",
+                      "label": "Lange Strecke",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:hiking",
+                      "question": "Können Sie 1km am Stück gehen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "icf_d455",
+                  "type": "icf",
+                  "label": "Sich auf andere Weise fortbewegen",
+                  "icfCode": "d455",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:wheelchair-accessibility",
+                  "question": "Nutzen Sie Hilfsmittel zur Fortbewegung?",
+                  "selectedIdx": 1,
+                  "children": [
+                    {
+                      "id": "det_d455_1",
+                      "type": "detail",
+                      "label": "Treppensteigen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:stairs-up",
+                      "question": "Können Sie eine Treppe steigen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "q_waschen",
+              "type": "question",
+              "label": "Waschen",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Probleme beim Waschen des ganzen Körpers?",
+              "icon": "mdi:shower-head",
+              "selectedIdx": 1,
+              "children": [
+                {
+                  "id": "icf_d510",
+                  "type": "icf",
+                  "label": "Sich waschen",
+                  "icfCode": "d510",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:hand-wash",
+                  "question": "Wie selbstständig können Sie sich waschen?",
+                  "selectedIdx": 1,
+                  "children": [
+                    {
+                      "id": "det_d510_1",
+                      "type": "detail",
+                      "label": "Oberkörper waschen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:human",
+                      "question": "Können Sie Ihren Oberkörper selbst waschen?",
+                      "selectedIdx": 0,
+                      "children": []
+                    },
+                    {
+                      "id": "det_d510_2",
+                      "type": "detail",
+                      "label": "Füße/Beine waschen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:foot-print",
+                      "question": "Können Sie Ihre Füße/Beine selbst waschen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "q_anziehen",
+              "type": "question",
+              "label": "Anziehen",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Schwierigkeiten beim An- und Auskleiden?",
+              "icon": "mdi:tshirt-crew",
+              "selectedIdx": 0,
+              "children": [
+                {
+                  "id": "icf_d540",
+                  "type": "icf",
+                  "label": "Sich kleiden",
+                  "icfCode": "d540",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:hanger",
+                  "question": "Wie selbstständig können Sie sich anziehen?",
+                  "selectedIdx": 0,
+                  "children": [
+                    {
+                      "id": "det_d540_1",
+                      "type": "detail",
+                      "label": "Schuhe anziehen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:shoe-formal",
+                      "question": "Können Sie sich selbst Schuhe anziehen?",
+                      "selectedIdx": 1,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "q_haushalt",
+              "type": "question",
+              "label": "Haushalt",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Probleme bei der Hausarbeit?",
+              "icon": "mdi:broom",
+              "selectedIdx": 2,
+              "children": [
+                {
+                  "id": "icf_d640",
+                  "type": "icf",
+                  "label": "Hausarbeiten erledigen",
+                  "icfCode": "d640",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:vacuum",
+                  "question": "Wie gut können Sie den Haushalt führen?",
+                  "selectedIdx": 2,
+                  "children": [
+                    {
+                      "id": "det_d640_1",
+                      "type": "detail",
+                      "label": "Kochen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:pot-steam",
+                      "question": "Können Sie selbstständig kochen?",
+                      "selectedIdx": 1,
+                      "children": []
+                    },
+                    {
+                      "id": "det_d640_2",
+                      "type": "detail",
+                      "label": "Putzen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:spray-bottle",
+                      "question": "Können Sie selbstständig putzen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec_sozial",
+          "type": "section",
+          "label": "Soziale Teilhabe",
+          "required": false,
+          "helpText": "",
+          "options": [],
+          "children": [
+            {
+              "id": "q_komm",
+              "type": "question",
+              "label": "Kommunikation",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Schwierigkeiten bei der Verständigung?",
+              "icon": "mdi:chat-processing",
+              "selectedIdx": 1,
+              "children": [
+                {
+                  "id": "icf_d350",
+                  "type": "icf",
+                  "label": "Konversation",
+                  "icfCode": "d350",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:forum",
+                  "question": "Wie gut können Sie ein Gespräch führen?",
+                  "selectedIdx": 1,
+                  "children": [
+                    {
+                      "id": "det_d350_1",
+                      "type": "detail",
+                      "label": "Einzelgespräch",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:account-voice",
+                      "question": "Können Sie ein Einzelgespräch gut führen?",
+                      "selectedIdx": 0,
+                      "children": []
+                    },
+                    {
+                      "id": "det_d350_2",
+                      "type": "detail",
+                      "label": "Gruppengespräch",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:account-group",
+                      "question": "Können Sie in einer Gruppe einem Gespräch folgen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "q_beziehung",
+              "type": "question",
+              "label": "Beziehungen",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Schwierigkeiten mit zwischenmenschlichen Beziehungen?",
+              "icon": "mdi:heart-multiple",
+              "selectedIdx": 0,
+              "children": [
+                {
+                  "id": "icf_d710",
+                  "type": "icf",
+                  "label": "Elementare Interaktionen",
+                  "icfCode": "d710",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:handshake",
+                  "question": "Wie gut können Sie grundlegende Interaktionen durchführen?",
+                  "selectedIdx": 0,
+                  "children": [
+                    {
+                      "id": "det_d710_1",
+                      "type": "detail",
+                      "label": "Respekt zeigen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:account-heart",
+                      "question": "Können Sie angemessen Wertschätzung zeigen?",
+                      "selectedIdx": 0,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "q_arbeit",
+              "type": "question",
+              "label": "Arbeit & Beschäftigung",
+              "required": true,
+              "helpText": "",
+              "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+              "question": "Haben Sie Schwierigkeiten bei der Arbeit?",
+              "icon": "mdi:briefcase",
+              "selectedIdx": 3,
+              "children": [
+                {
+                  "id": "icf_d850",
+                  "type": "icf",
+                  "label": "Bezahlte Tätigkeit",
+                  "icfCode": "d850",
+                  "options": ["Keine Probleme", "Wenige Probleme", "Einige Probleme", "Starke Probleme", "Sehr starke Probleme"],
+                  "helpText": "",
+                  "required": false,
+                  "icon": "mdi:cash",
+                  "question": "Wie gut können Sie Ihrer bezahlten Tätigkeit nachgehen?",
+                  "selectedIdx": 3,
+                  "children": [
+                    {
+                      "id": "det_d850_1",
+                      "type": "detail",
+                      "label": "Arbeitszeit einhalten",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:clock-check",
+                      "question": "Können Sie reguläre Arbeitszeiten einhalten?",
+                      "selectedIdx": 3,
+                      "children": []
+                    },
+                    {
+                      "id": "det_d850_2",
+                      "type": "detail",
+                      "label": "Aufgaben erledigen",
+                      "options": ["Problemlos", "Leichte Mühe", "Deutliche Mühe", "Kaum möglich"],
+                      "helpText": "",
+                      "required": false,
+                      "icon": "mdi:clipboard-check",
+                      "question": "Können Sie Arbeitsaufgaben fristgerecht erledigen?",
+                      "selectedIdx": 2,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
