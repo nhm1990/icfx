@@ -25,6 +25,32 @@ const switchVariant = async (name: string) => {
   }
 }
 
+// Forces a re-render of the active diagram after ratings change.
+const mockNonce = ref(0)
+
+const walkNodes = (nodes: IcfNode[], fn: (n: IcfNode) => void) => {
+  for (const n of nodes) {
+    fn(n)
+    if (n.children?.length) walkNodes(n.children, fn)
+  }
+}
+
+const mockRatings = () => {
+  walkNodes(sections.value, (n) => {
+    if (n.options && n.options.length > 1) {
+      n.selectedIdx = Math.floor(Math.random() * n.options.length)
+    }
+  })
+  mockNonce.value++
+}
+
+const clearRatings = () => {
+  walkNodes(sections.value, (n) => {
+    n.selectedIdx = null
+  })
+  mockNonce.value++
+}
+
 onMounted(async () => {
   await fetchVariants()
   if (variants.value.length > 0) {
@@ -63,6 +89,22 @@ const onSelectQuestion = (q: IcfNode) => {
       </button>
     </div>
 
+    <!-- Mock data tools (dev/demo only) -->
+    <div class="flex gap-2 justify-center mb-4">
+      <button
+        class="px-4 py-1.5 rounded-lg text-sm font-medium bg-indigo-600 text-white shadow-sm hover:bg-indigo-700 transition-colors cursor-pointer"
+        @click="mockRatings"
+      >
+        Mock Ratings
+      </button>
+      <button
+        class="px-4 py-1.5 rounded-lg text-sm font-medium bg-white text-gray-600 border border-gray-300 hover:bg-gray-100 transition-colors cursor-pointer"
+        @click="clearRatings"
+      >
+        Zurücksetzen
+      </button>
+    </div>
+
     <p v-if="error" class="text-red-600 text-sm mt-4">{{ error }}</p>
     <p v-else-if="loading && sections.length === 0" class="text-gray-400 text-sm mt-8">
       Lade Daten…
@@ -70,13 +112,13 @@ const onSelectQuestion = (q: IcfNode) => {
     <template v-else-if="sections.length > 0">
       <IcfxSunburst
         v-if="design === 'original'"
-        :key="'orig-' + activeVariant"
+        :key="'orig-' + activeVariant + '-' + mockNonce"
         :sections="sections"
         @select-question="onSelectQuestion"
       />
       <IcfxSunburstV2
         v-else
-        :key="'v2-' + activeVariant"
+        :key="'v2-' + activeVariant + '-' + mockNonce"
         :sections="sections"
         @select-question="onSelectQuestion"
       />
